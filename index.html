@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="A Frontend-Mentor challenge" />
+		<link
+			rel="shortcut icon"
+			href="assets/images/favicon-32x32.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Conference ticket generator</title>
+	</head>
+	<body>
+		<nav>
+			<img src="assets/images/logo-full.svg" alt="logo" />
+		</nav>
+		<main>
+			<!-- Form -->
+			<section id="form-page" class="form-page">
+				<header>
+					<h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+					<p>Secure your spot at next year's biggest coding conference.</p>
+				</header>
+
+				<section class="content">
+					<form action="javascript:void(0);" id="ticket-form">
+						<section class="avatar">
+							<label class="avatar-upload">
+								<input
+									type="file"
+									id="avatar"
+									accept="image/*"
+									onchange="handleFileSelect(event)"
+								/>
+								<div
+									id="avatar-dropzone"
+									class="avatar-dropzone"
+									ondrop="handleDrop(event)"
+									ondragover="allowDrop(event)"
+								>
+									<img
+										src="assets/images/icon-upload.svg"
+										alt="upload"
+										class="upload-icon"
+										id="uploaded-photo"
+									/>
+									<span>Drag and drop or click to upload</span>
+								</div>
+							</label>
+						</section>
+						<section class="name">
+							<input
+								type="text"
+								placeholder="Full name"
+								name="full-name"
+								id="full-name"
+								class="name-btn"
+								required
+							/>
+							<label for="full-name">Full name</label>
+						</section>
+						<section class="email">
+							<input
+								type="email"
+								name="email-btn"
+								id="email-btn"
+								class="email-btn"
+								placeholder="email"
+								required
+							/>
+							<label for="email-btn">Email</label>
+							<p>please enter a valid email</p>
+						</section>
+						<section class="github-username">
+							<input
+								type="text"
+								name="github-username"
+								id="github-username"
+								class="github-btn"
+								placeholder="Github username"
+								required
+							/>
+							<label for="github-username">Github username</label>
+						</section>
+						<section class="submit">
+							<input type="submit" value="Generate my ticket" />
+						</section>
+					</form>
+				</section>
+			</section>
+			<!-- Form -->
+
+			<!-- Ticket -->
+			<section id="ticket-page" class="ticket-page" style="display: none">
+				<header>
+					<h1>
+						Congrats,<span id="user-fullname">
+							<span class="user-name">Jonatan</span>
+							<span class="user-name">Kristof!</span>
+						</span>
+						your tickit is ready
+					</h1>
+					<p>
+						We've emailed your ticket to
+						<span id="user-email">jonatan@email.com</span>
+						and will send updates in the run up to the event.
+					</p>
+				</header>
+
+				<section class="content">
+					<section class="ticket">
+						<section class="event">
+							<img src="assets/images/logo-mark.svg" alt="Mark logo" />
+							<section class="info">
+								<h2 class="event-name">Coding Conf</h2>
+								<p class="event-date">Dec 8, 2025 / Cairo, Egypt</p>
+							</section>
+						</section>
+
+						<section class="user">
+							<img
+								src="assets/images/avatar.jpg"
+								alt="avatar"
+								id="user-avatar"
+							/>
+							<section class="info">
+								<h4 id="user-name">Jonatan Kristof</h4>
+								<p>
+									<img src="assets/images/icon-github.svg" alt="github" />
+									<span id="github-user">@husainasdjoad</span>
+								</p>
+							</section>
+						</section>
+					</section>
+				</section>
+			</section>
+			<!-- Ticket -->
+
+			<script src="js/main.js"></script>
+		</main>
+	</body>
+</html>
